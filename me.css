@@ -1,129 +1,80 @@
-/* Configurações gerais para o site - mantém para desktop */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f2ff; 
+    background-color: #f4f2ff;
 }
 
-/* Menu lateral */
 .menu-lateral {
-    height: 100%; 
-    width: 200px; /* Largura fixa para desktop */
-    position: fixed; 
-    background-color: #2e2c4f; 
-    padding-top: 20px; 
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    background-color: #2e2c4f;
+    padding-top: 20px;
     color: white;
 }
 
 .menu-lateral a {
-    padding: 15px 25px; 
-    text-decoration: none; 
+    padding: 15px 25px;
+    text-decoration: none;
     font-size: 18px;
-    color: #dcdcff; 
-    display: block; 
+    color: #dcdcff;
+    display: block;
 }
 
 .menu-lateral a:hover {
-    background-color: #464473; 
+    background-color: #464473;
 }
 
-/* Conteúdo do site */
 .conteudo-site {
-    margin-left: 220px; /* Espaço para o menu lateral no desktop */
+    margin-left: 220px;
     padding: 20px;
-    background-color: #ece6ff; 
-    border: 2px solid #8a2be2; 
-    border-radius: 15px; 
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
+    background-color: #ece6ff;
+    border: 2px solid #8a2be2;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Media queries para dispositivos móveis */
+.imagem-menu {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 230px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 768px) {
-    /* Ajuste do menu lateral para telas menores */
     .menu-lateral {
-        width: 100px; /* Reduzir a largura no mobile */
+        width: 100px;
         padding-top: 10px;
     }
 
-    /* Ajustar o conteúdo para se adaptar ao mobile */
     .conteudo-site {
-        margin-left: 120px; /* Espaço reduzido para o conteúdo no mobile */
-        padding: 15px; /* Reduzir o padding para telas menores */
+        margin-left: 120px;
+        padding: 15px;
     }
 
-    /* Ajustes para ainda menores, como celulares */
-    @media (max-width: 600px) {
-        .menu-lateral {
-            display: none; /* Ocultar o menu lateral em telas pequenas */
-        }
-
-        .conteudo-site {
-            margin-left: 0; /* Remover o espaço lateral */
-            padding: 10px; /* Ajustar o padding */
-        }
+    .imagem-menu {
+        width: 150px; /* Ajustar largura para telas menores */
+        height: auto; /* Mantém a proporção correta */
+        bottom: 10px; /* Ajuste da posição */
     }
 }
 
-/* Outras seções e ajustes para telas menores */
-.sobre-mim {
-    padding: 20px; 
-    background-color: #f4f2ff; 
-    border: 2px solid #8a2be2; 
-    border-radius: 10px; 
-    margin-bottom: 20px; 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
-}
-
-.sobre-mim p {
-    font-size: 16px; 
-    line-height: 1.6; 
-    color: #4a4a4a; 
-}
-
-/* Responsividade no título */
-h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Arial', sans-serif; 
-    background: linear-gradient(45deg, #6a0dad, #ff1493); 
-    -webkit-background-clip: text; 
-    color: transparent; 
-    font-size: 48px; /* Tamanho para desktop */
-    letter-spacing: 2px; 
-    border-bottom: 3px solid #6a0dad; 
-    padding-bottom: 10px; 
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 32px; /* Tamanho do título reduzido no mobile */
+@media (max-width: 600px) {
+    .menu-lateral {
+        display: none;
     }
-}
 
-/* Ajustes para o footer */
-footer {
-    margin: 0;
-    padding: 0;
-    background-color: #2e2c4f;
-    color: #dcdcff; 
-}
+    .conteudo-site {
+        margin-left: 0;
+        padding: 10px;
+    }
 
-.rodape {
-    background-color: #2e2c4f; 
-    padding: 30px; 
-    text-align: center; 
-    color: #dcdcff; 
-    border-top: 3px solid #6a0dad; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    flex-wrap: wrap; 
-}
-
-@media (max-width: 768px) {
-    .rodape {
-        flex-direction: column; /* Alinhar os itens verticalmente no mobile */
+    .imagem-menu {
+        display: none; /* Ocultar a imagem no celular */
     }
 }
