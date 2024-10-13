@@ -1,104 +1,136 @@
-/* CSS para manter o layout original e melhorar a responsividade em celulares */
 body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
-    font-family: Arial, sans-serif; /* Mantém a fonte original */
+    padding: 0;
+    background-color: #f4f2ff; 
 }
 
 .menu-lateral {
-    position: fixed;
-    width: 200px;
-    height: 100%;
-    background-color: #333; /* Mantém a cor do fundo do menu */
-    color: #fff;
-    padding: 20px;
+    height: 100%; 
+    width: 200px; 
+    position: fixed; 
+    background-color: #2e2c4f; 
+    padding-top: 20px; 
+    color: white;
 }
 
 .menu-lateral a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 15px;
+    padding: 15px 25px; 
+    text-decoration: none; 
+    font-size: 18px;
+    color: #dcdcff; 
+    display: block; 
+}
+
+.menu-lateral a:hover {
+    background-color: #464473; 
 }
 
 .conteudo-site {
-    margin-left: 220px; /* Deixe espaço para o menu lateral */
+    margin-left: 220px;
     padding: 20px;
+    background-color: #ece6ff; 
+    border: 2px solid #8a2be2; 
+    border-radius: 15px; 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
 }
 
-h1, h3 {
-    color: #333; /* Cor dos textos dos títulos */
+.sobre-mim {
+    padding: 20px; 
+    background-color: #f4f2ff; 
+    border: 2px solid #8a2be2; 
+    border-radius: 10px; 
+    margin-bottom: 20px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.sobre-mim p {
+    font-size: 16px; 
+    line-height: 1.6; 
+    color: #4a4a4a; 
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif; 
+    background: linear-gradient(45deg, #6a0dad, #ff1493); 
+    -webkit-background-clip: text; 
+    color: transparent; 
+    font-size: 48px; 
+    letter-spacing: 2px; 
+    border-bottom: 3px solid #6a0dad; 
+    padding-bottom: 10px; 
+}
+
+h3 {
+    color: #6a0dad;
+    margin-bottom: 10px; 
+}
+
+.caixa {
+    border: 2px solid #8a2be2; 
+    padding: 10px;
+    display: inline-block;
+    background-color: #f4f2ff; 
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); 
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    background-color: #2e2c4f;
+    color: #dcdcff; 
 }
 
 .rodape {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #333; /* Cor de fundo do rodapé */
-    color: #fff;
+    background-color: #2e2c4f; 
+    padding: 30px; 
+    text-align: center; 
+    color: #dcdcff; 
+    border-top: 3px solid #6a0dad; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
 }
 
 .rodape .contato {
-    flex: 1;
-    text-align: left;
+    flex: 1; 
+    text-align: left; 
 }
 
 .rodape .copy {
-    flex: 1;
-    text-align: right;
-    font-size: 14px;
+    flex: 1; 
+    text-align: right; 
+    font-size: 14px; 
 }
 
 .rodape .copy p {
-    margin: 0;
+    margin: 0; 
 }
 
 .rodape .contato h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #dcdcff; /* Cor específica do título no rodapé */
+    font-size: 20px; 
+    margin-bottom: 10px; 
+    color: #dcdcff; 
 }
 
 .rodape .contato p {
-    margin: 5px 0;
-    font-size: 16px;
+    margin: 5px 0; 
+    font-size: 16px; 
 }
 
 .imagem-menu {
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px; /* Largura original da imagem */
-    height: 230px; /* Altura original da imagem */
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 200px; 
+    height: 230px;
     border-radius: 20px; 
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); 
-}
-
-/* Media queries para dispositivos móveis */
-@media (max-width: 768px) {
-    .menu-lateral {
-        position: relative; /* Muda a posição do menu para que fique abaixo do cabeçalho */
-        width: 100%; /* O menu ocupará toda a largura da tela */
-        height: auto; /* Permite que o menu se ajuste ao conteúdo */
-    }
-
-    .conteudo-site {
-        margin-left: 0; /* Remove a margem esquerda para o conteúdo */
-    }
-
-    .rodape {
-        flex-direction: column; /* Coloca os elementos do rodapé em coluna */
-        text-align: center; /* Centraliza o texto no rodapé */
-    }
-
-    .rodape .contato,
-    .rodape .copy {
-        flex: none; /* Remove a flexibilidade das colunas */
-        margin: 10px 0; /* Adiciona margem entre os elementos */
-    }
-
-    .imagem-menu {
-        width: 150px; /* Reduz a largura da imagem no menu */
-        height: auto; /* Mantém a proporção da imagem */
-    }
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); 
 }
