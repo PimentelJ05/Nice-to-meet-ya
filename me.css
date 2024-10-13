@@ -1,3 +1,4 @@
+/* Configurações gerais para o site - mantém para desktop */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
@@ -5,9 +6,10 @@ body {
     background-color: #f4f2ff; 
 }
 
+/* Menu lateral */
 .menu-lateral {
     height: 100%; 
-    width: 200px; 
+    width: 200px; /* Largura fixa para desktop */
     position: fixed; 
     background-color: #2e2c4f; 
     padding-top: 20px; 
@@ -26,8 +28,9 @@ body {
     background-color: #464473; 
 }
 
+/* Conteúdo do site */
 .conteudo-site {
-    margin-left: 220px;
+    margin-left: 220px; /* Espaço para o menu lateral no desktop */
     padding: 20px;
     background-color: #ece6ff; 
     border: 2px solid #8a2be2; 
@@ -35,6 +38,34 @@ body {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
 }
 
+/* Media queries para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Ajuste do menu lateral para telas menores */
+    .menu-lateral {
+        width: 100px; /* Reduzir a largura no mobile */
+        padding-top: 10px;
+    }
+
+    /* Ajustar o conteúdo para se adaptar ao mobile */
+    .conteudo-site {
+        margin-left: 120px; /* Espaço reduzido para o conteúdo no mobile */
+        padding: 15px; /* Reduzir o padding para telas menores */
+    }
+
+    /* Ajustes para ainda menores, como celulares */
+    @media (max-width: 600px) {
+        .menu-lateral {
+            display: none; /* Ocultar o menu lateral em telas pequenas */
+        }
+
+        .conteudo-site {
+            margin-left: 0; /* Remover o espaço lateral */
+            padding: 10px; /* Ajustar o padding */
+        }
+    }
+}
+
+/* Outras seções e ajustes para telas menores */
 .sobre-mim {
     padding: 20px; 
     background-color: #f4f2ff; 
@@ -50,6 +81,7 @@ body {
     color: #4a4a4a; 
 }
 
+/* Responsividade no título */
 h1 {
     display: flex;
     align-items: center;
@@ -58,27 +90,19 @@ h1 {
     background: linear-gradient(45deg, #6a0dad, #ff1493); 
     -webkit-background-clip: text; 
     color: transparent; 
-    font-size: 48px; 
+    font-size: 48px; /* Tamanho para desktop */
     letter-spacing: 2px; 
     border-bottom: 3px solid #6a0dad; 
     padding-bottom: 10px; 
 }
 
-h3 {
-    color: #6a0dad;
-    margin-bottom: 10px; 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px; /* Tamanho do título reduzido no mobile */
+    }
 }
 
-.caixa {
-    border: 2px solid #8a2be2; 
-    padding: 10px;
-    display: inline-block;
-    background-color: #f4f2ff; 
-    border-radius: 8px;
-    margin: 10px 0;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); 
-}
-
+/* Ajustes para o footer */
 footer {
     margin: 0;
     padding: 0;
@@ -98,51 +122,8 @@ footer {
     flex-wrap: wrap; 
 }
 
-.rodape .contato {
-    flex: 1; 
-    text-align: left; 
-}
-
-.rodape .copy {
-    flex: 1; 
-    text-align: right; 
-    font-size: 14px; 
-}
-
-.rodape .copy p {
-    margin: 0; 
-}
-
-.rodape .contato h3 {
-    font-size: 20px; 
-    margin-bottom: 10px; 
-    color: #dcdcff; 
-}
-
-.rodape .contato p {
-    margin: 5px 0; 
-    font-size: 16px; 
-}
-
-.imagem-menu {
-    position: absolute;
-    bottom: 20px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    width: 200px; 
-    height: 230px;
-    border-radius: 20px; 
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); 
-}
-
-.container {
-    width: 100%;
-    padding: 20px;
-}
-
-@media (max-width: 600px) {
-    .container {
-        padding: 10px;
+@media (max-width: 768px) {
+    .rodape {
+        flex-direction: column; /* Alinhar os itens verticalmente no mobile */
     }
 }
-
