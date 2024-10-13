@@ -143,12 +143,12 @@ footer {
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
     .menu-lateral {
-        width: 100px; /* Largura reduzida para mobile */
+        width: 150px; /* Largura reduzida para mobile */
         padding-top: 10px;
     }
 
     .conteudo-site {
-        margin-left: 120px; /* Ajuste para conteúdo */
+        margin-left: 160px; /* Ajuste para conteúdo */
         padding: 15px;
     }
 
@@ -160,11 +160,12 @@ footer {
 
 @media (max-width: 600px) {
     .menu-lateral {
-        display: none; /* Ocultar menu lateral em telas pequenas */
+        width: 120px; /* Largura ainda menor para telas pequenas */
+        padding-top: 5px; /* Ajuste do padding para telas menores */
     }
 
     .conteudo-site {
-        margin-left: 0; /* Remover espaço lateral */
+        margin-left: 130px; /* Ajuste de espaço lateral */
         padding: 10px; /* Ajustar o padding */
     }
 
