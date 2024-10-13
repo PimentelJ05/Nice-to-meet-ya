@@ -173,4 +173,9 @@ footer {
         width: 120px; /* Largura da imagem ainda menor */
         height: auto; /* Mantém a proporção */
     }
+
+    /* Ocultar links adicionais e mostrar apenas 3 linhas */
+    .menu-lateral a:nth-child(n+4) {
+        display: none; /* Ocultar links além dos três primeiros */
+    }
 }
