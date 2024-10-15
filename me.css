@@ -176,32 +176,37 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
     .menu-lateral {
-        width: 105px; /* Largura mais estreita */
-        padding-top: 5px;
+        width: 150px; /* Largura reduzida para mobile */
+        padding-top: 10px;
     }
 
     .conteudo-site {
-        margin-left: 90px;
-        padding: 10px;
+        margin-left: 160px; /* Ajuste para conteúdo */
+        padding: 15px;
     }
 
     .imagem-menu {
-        width: 80px;
+        width: 150px; /* Ajuste de largura da imagem no mobile */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-lateral {
+        width: 120px; /* Largura ainda menor para telas pequenas */
+        padding-top: 5px; /* Ajuste do padding para telas menores */
     }
 
-    h1 {
-        font-size: 28px; /* Ajuste do tamanho do título */
+    .conteudo-site {
+        margin-left: 130px; /* Ajuste de espaço lateral */
+        padding: 10px; /* Ajustar o padding */
     }
 
-    .sobre-mim {
-        padding: 10px;
-        margin-bottom: 15px;
-    }
-
-    .caixa {
-        padding: 8px;
-        margin: 5px 0;
+    .imagem-menu {
+        width: 120px; /* Largura da imagem ainda menor */
+        height: auto; /* Mantém a proporção */
     }
 }
