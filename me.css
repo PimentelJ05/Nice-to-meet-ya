@@ -143,34 +143,65 @@ footer {
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
     .menu-lateral {
-        width: 150px; /* Largura reduzida para mobile */
+        width: 100px; /* Menor largura para melhor encaixe */
         padding-top: 10px;
+        position: fixed;
+        overflow-y: auto; /* Permitir rolagem se necessário */
     }
 
     .conteudo-site {
-        margin-left: 160px; /* Ajuste para conteúdo */
+        margin-left: 120px; /* Ajuste para espaço suficiente ao lado */
         padding: 15px;
     }
 
     .imagem-menu {
-        width: 150px; /* Ajuste de largura da imagem no mobile */
-        height: auto; /* Mantém a proporção da imagem */
+        width: 100px;
+        height: auto;
+        bottom: 10px;
+    }
+
+    h1 {
+        font-size: 36px; /* Reduz tamanho da fonte para mobile */
+    }
+
+    .rodape {
+        flex-direction: column; /* Coluna para melhor alinhamento */
+        align-items: center;
+        text-align: center;
+    }
+
+    .rodape .contato, .rodape .copy {
+        flex: none;
+        margin: 10px 0;
     }
 }
 
 @media (max-width: 600px) {
     .menu-lateral {
-        width: 120px; /* Largura ainda menor para telas pequenas */
-        padding-top: 5px; /* Ajuste do padding para telas menores */
+        width: 80px; /* Largura mais estreita */
+        padding-top: 5px;
     }
 
     .conteudo-site {
-        margin-left: 130px; /* Ajuste de espaço lateral */
-        padding: 10px; /* Ajustar o padding */
+        margin-left: 90px;
+        padding: 10px;
     }
 
     .imagem-menu {
-        width: 120px; /* Largura da imagem ainda menor */
-        height: auto; /* Mantém a proporção */
+        width: 80px;
+    }
+
+    h1 {
+        font-size: 28px; /* Ajuste do tamanho do título */
+    }
+
+    .sobre-mim {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .caixa {
+        padding: 8px;
+        margin: 5px 0;
     }
 }
