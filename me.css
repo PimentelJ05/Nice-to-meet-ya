@@ -178,7 +178,7 @@ footer {
 
 @media (max-width: 600px) {
     .menu-lateral {
-        width: 80px; /* Largura mais estreita */
+        width: 85px; /* Largura mais estreita */
         padding-top: 5px;
     }
 
